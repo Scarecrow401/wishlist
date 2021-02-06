@@ -1,0 +1,35 @@
+<div class="wishlist">
+    <div class="container wishlist__container">
+        <h1 class="wishlist__title">My wish list</h1>
+        <div class="wishlist__inputs" [formGroup]='form'>
+            <input class="wishlist__input" type="text" placeholder="Enter wish title" formControlName='title'>
+            <input class="wishlist__input" type="text" placeholder="Enter wish link" formControlName='link'>
+        </div>
+        <button class="wishlist__btn" (click)='addNewWish()'> Add new wish</button>
+        <ul class="wishlist__items">
+            <li *ngFor="let item of items; let i = index" class="wishlist__item wish">
+                <div class="wish__inner">
+                    <button class="wish__remove" (click)='removeWish(i)'>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                            class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 352 512">
+                            <path fill="currentColor"
+                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="wish__img">
+                        <img src="../../../favicon.ico" alt="">
+                    </div>
+                    <div class="wish__description">
+                        <h3 class="wish__title">{{item.wishTitle}}</h3>
+                        <a href="{{item.wishLink}}" target="_blank" class="wish__link">
+                            Link
+                        </a>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
