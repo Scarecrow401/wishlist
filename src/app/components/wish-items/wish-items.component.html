@@ -4,6 +4,7 @@
         <div class="wishlist__inputs" [formGroup]='form'>
             <input class="wishlist__input" type="text" placeholder="Enter wish title" formControlName='title'>
             <input class="wishlist__input" type="text" placeholder="Enter wish link" formControlName='link'>
+            <input class="wishlist__input" type="text" placeholder="Enter image url" formControlName='imageUrl'>
         </div>
         <button class="wishlist__btn" (click)='addNewWish()'> Add new wish</button>
         <ul class="wishlist__items">
@@ -19,7 +20,7 @@
                         </svg>
                     </button>
                     <div class="wish__img">
-                        <img src="../../../favicon.ico" alt="">
+                        <img src="{{item.imageUrl}}" alt="">
                     </div>
                     <div class="wish__description">
                         <h3 class="wish__title">{{item.wishTitle}}</h3>

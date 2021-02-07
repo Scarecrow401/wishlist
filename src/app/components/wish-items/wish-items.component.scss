@@ -5,6 +5,7 @@
     width: 300px;
     margin: 0 auto;
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   &__title {
@@ -51,7 +52,7 @@
   overflow: hidden;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &:hover {
@@ -96,6 +97,7 @@
   &__img {
     margin-right: 20px;
     width: 30%;
+    height: 100%;
 
     img {
       width: 100%;

@@ -20,12 +20,17 @@ export class WishItemsComponent implements OnInit {
     this.form = new FormGroup({
       title: new FormControl(null, Validators.required),
       link: new FormControl(null, Validators.required),
+      imageUrl: new FormControl(null, Validators.required),
     });
   }
 
   addNewWish(): void {
     if (this.form.valid) {
-      this.items.push({ wishTitle: this.form.controls.title.value, wishLink: this.form.controls.link.value });
+      this.items.push({
+        wishTitle: this.form.controls.title.value,
+        wishLink: this.form.controls.link.value,
+        imageUrl: this.form.controls.imageUrl.value,
+      });
       this.form.reset();
       this.wishListService.setWishlist(this.items);
     }
