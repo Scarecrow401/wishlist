@@ -7,7 +7,7 @@ import { WishItemsModule } from './components/wish-items/wish-items.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, WishItemsModule],
+  imports: [BrowserModule, WishItemsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -15,4 +15,8 @@ export class WishListService {
   getWishlist(): string {
     return localStorage.getItem(this.wishlistStorageKey);
   }
+
+  removeWishlist(): void {
+    localStorage.removeItem(this.wishlistStorageKey);
+  }
 }

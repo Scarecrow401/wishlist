@@ -42,4 +42,9 @@ export class WishItemsComponent implements OnInit {
     this.items.splice(index, 1);
     this.wishListService.setWishlist(this.items);
   }
+
+  clearAllWishes(): void {
+    this.items = [];
+    this.wishListService.removeWishlist();
+  }
 }
