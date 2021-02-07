@@ -15,7 +15,9 @@ export class WishItemsComponent implements OnInit {
   constructor(private readonly wishListService: WishListService) {}
 
   ngOnInit(): void {
-    this.items = JSON.parse(this.wishListService.getWishlist());
+    if (this.wishListService.getWishlist()) {
+      this.items = JSON.parse(this.wishListService.getWishlist());
+    }
 
     this.form = new FormGroup({
       title: new FormControl(null, Validators.required),
